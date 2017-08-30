@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    .base {
+      fill: #FFC107;
+      stroke: #E65100;
+      stroke-width: 2;
+    }
+
+    .border {
+      border: 1px dashed #ccc;
+    }
+  </style>
+  <title>Group Defs Symbol</title>
+</head>
+
+<body>
+  <svg class="border" width="600" height="400" viewBox="0 0 600 400">
+    <symbol>
+      <polygon id="elem" points="25,0 30,20 50,20 35,30 40,50 25,35 10,50 15,30 0,20 20,20" />
+    </symbol>
+    <use x="160" y="150" class="base" xlink:href="#elem" />
+    <use x="220" y="165" class="base" xlink:href="#elem" />
+    <use x="280" y="175" class="base" xlink:href="#elem" />
+    <use x="340" y="165" class="base" xlink:href="#elem" />
+    <use x="400" y="150" class="base" xlink:href="#elem" />
+  </svg>
+</body>
+
+</html>

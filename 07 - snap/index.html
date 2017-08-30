@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="snap.svg-min.js"></script>
+  <title>Snap</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <svg id="figure" width="500" height="500" viewBox="0 0 500 500">
+  </svg>
+  <script>
+    let s = Snap('#figure');
+    let sky = s.rect(0, 0, 500, 500);
+    sky.attr({
+      fill: "lightblue"
+    });
+    let sun = s.circle(250, 350, 100);
+    sun.attr({
+      fill: "yellow"
+    });
+    let sea = s.rect(0, 250, 500, 250);
+    sea.attr({
+      fill: "#2f62ad"
+    });
+    sun.animate({cy: 100, r: 50}, 3000, mina.easeinout);
+  </script>
+</body>
+
+</html>
